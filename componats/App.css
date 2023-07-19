@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+}
+/*Header style*/
+.header{
+    display: flex;
+    justify-content: space-between;
+    background-color: blue;
+    align-items: center;
+}
+.logo-img{
+    width:100px;
+    height:100px;
+    border-radius: 50%;
+}
+.user-img{
+    width:30px;
+    height:30px;
+   position: relative;
+   right: 7px ;
+    border-radius: 5px;
+   
+
+}
+.serach-bar{
+    padding: 7px;
+    position: relative;
+    left: 150px;
+    border-radius: 5px;
+
+}
+.nav-list{
+    display: flex;
+  
+}
+ul{
+    list-style-type: none;
+}
+li{
+    padding-right: 20px;
+    font-size: 20px;
+    font-family:sans-serif;
+    font-weight: 700;
+    color:whitesmoke;
+    position: relative;
+    left: 350px;
+    display: block;
+border-radius: 5px;
+}
+.cart{
+    padding:7px;
+background-color:greenyellow;
+color:brown;
+border-radius: 5px;
+position: relative;
+left: 200px;
+
+}
+li:hover{
+  
+    background-color: aliceblue;
+    color:black;
+    text-align: center;
+        padding: 14px 16px;
+        border-radius: 5px;
+
+}
+/*body style*/
+.body{
+    background-color:#f0f5f1;
+}
+.card{
+    display: inline-flex;
+    margin-right:10px;
+}

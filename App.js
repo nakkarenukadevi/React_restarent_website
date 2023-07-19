@@ -1,11 +1,15 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
+import Header from "./componats/Header";
+import RestaurantCard from "./componats/RestaurantCard";
+import Body from "./componats/Body";
+
 function App() {
   return (
     <>
-      <div className="title">
-        <h1>This is h1 element</h1>
-        <h2>This is h2 element</h2>
-        <h3>This is h3 element</h3>
-      </div>
+      <Header />
+
+      <Body />
     </>
   );
 }

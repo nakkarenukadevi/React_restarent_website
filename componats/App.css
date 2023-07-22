@@ -25,9 +25,13 @@
 .serach-bar{
     padding: 7px;
     position: relative;
-    left: 150px;
+    left: 100px;
     border-radius: 5px;
 
+}
+.search-icon{
+    position: relative;
+        right: 6-0px;
 }
 .nav-list{
     display: flex;
@@ -70,6 +74,32 @@ li:hover{
     background-color:#f0f5f1;
 }
 .card{
-    display: inline-flex;
-    margin-right:10px;
+ 
+    display: inline-table;
+    margin:10px;
+    text-align: center;
+    width: 100px;
+border-radius:5px ;
+padding:10px;
+transition: width 2s, height 2s, transform 2s;
+}
+
+
+.card-img-top{
+    border-radius: 5px;
+    width:200px;
+    height:200px;
+}
+
+.star{
+    color:green;
+}
+.card:hover{
+    background-color: darkgray;
+}
+.top_restarent{
+    padding:10px;
+    background-color: blue;
+    color:#f0f5f1;
+    margin-top: 10px;
 }

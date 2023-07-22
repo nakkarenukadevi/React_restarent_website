@@ -14,15 +14,28 @@ const Body = () => {
     );
     let json = await data.json();
     setrestarent(
-      json.data?.cards[0]?.card?.card?.gridElements?.infoWithStyle?.info
+      json.data?.cards[2].card.card.gridElements.infoWithStyle.restaurants
     );
   }
 
   return (
     <>
-      <h1 style={{ margin: "10px" }}>Best offers for you</h1>
-      {restarent.map((restarent) => {
-        return <RestaurantCard key={restarent.id} restarent={restarent} />;
+      <div>
+        <button
+          className="top_restarent"
+          onClick={() => {
+            let fillterresta = restarent.filter(
+              (fill) => fill.info.avgRating >= 4
+            );
+
+            setrestarent(fillterresta);
+          }}
+        >
+          Top Rating restarent
+        </button>
+      </div>
+      {restarent.map((rest) => {
+        return <RestaurantCard key={rest.info.id} rest={rest} />;
       })}
     </>
   );

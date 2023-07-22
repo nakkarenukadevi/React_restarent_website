@@ -1,17 +1,39 @@
-import { carousel_url } from "../componats/utils/coursel.js";
+import { img_url } from "./utils/constant.js";
+import { Image, Shimmer } from "react-shimmer";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useState } from "react";
+
+import { faStar } from "@fortawesome/free-solid-svg-icons";
+
 function RestaurantCard(props) {
-  let { id, imageId } = props.restarent;
+  console.log(props.rest);
+  let {
+    name,
+    cloudinaryImageId,
+    locality,
+    areaName,
+    avgRating,
+    costForTwo,
+    cuisines,
+  } = props.rest.info;
 
   return (
     <>
       <div className="card">
-        <div className="card-img">
-          <img
-            className="img"
-            src={"https://res.cloudinary.com/swiggy/image/upload/" + imageId}
-            style={{ width: "10rem" }}
-          />
-        </div>
+        <img
+          src={img_url + cloudinaryImageId}
+          className="card-img-top"
+          alt="..."
+        />
+
+        <h4>{name}</h4>
+
+        <h4>{areaName}</h4>
+        <h4>{costForTwo}</h4>
+        <h4>
+          <FontAwesomeIcon icon={faStar} className="star" />
+          {avgRating}
+        </h4>
       </div>
     </>
   );
